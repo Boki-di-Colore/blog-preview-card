@@ -54,19 +54,53 @@ h1, h2, h3, h4, h5, h6 {
 /* Custom properties */
 
 :root {
-    --primary-bg-color: #F4D04E;
-    --secondary-bg-color: #FFFFFF;
+  /* Background colors */
+  --primary-bg-color: #F4D04E;
+  --secondary-bg-color: #FFFFFF;
 
-    --primary-font-color: #111111;
-    --secondary-font-color: #6B6B6B;
+  /* Font colors */
 
-    --heading-font-weight: 300;
-    --subheading-font-weight: 150;
-    --paragraph-font-weight: 100;
-    --notes-font-weight: 50;
+  --primary-font-color: #111111;
+  --secondary-font-color: #6B6B6B;
 
-    --heading-line-height: 
-    --subheading-line-height:
-    --paragraph-line-height:
-    --notes-line-height: 
+  /* Font weights */
+
+  --heading-font-weight: 300;
+  --subheading-font-weight: 150;
+  --paragraph-font-weight: 100;
+  --notes-font-weight: 50;
+
+  /* Letter spacing */
+
+  --heading-letter-spacing: 1.5rem;
+  --subheading-letter-spacing: 0.75rem;
+  --paragraph-letter-spacing: 0.5rem;
+  --notes-letter-spacing: 0.25rem;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  font-family: Figtree, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+main {
+  margin: auto;
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 21rem;
+  border-radius: 1.25rem;
+}
+
+.photo {
+  margin: auto;
 }

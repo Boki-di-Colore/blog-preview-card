@@ -99,6 +99,7 @@ main {
   text-align: center;
   max-width: 21rem;
   border-radius: 1rem;
+  /* container-type: inline-size; */
 }
 
 .hero-photo {

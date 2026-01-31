@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   /* Background colors */
+
   --primary-bg-color: #F4D04E;
   --secondary-bg-color: #FFFFFF;
 
@@ -65,10 +66,18 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Font weights */
 
-  --heading-font-weight: 300;
-  --subheading-font-weight: 150;
-  --paragraph-font-weight: 100;
-  --notes-font-weight: 50;
+  --primary-font-weight: 800;
+  --secondary-font-weight: 500;
+  /* --paragraph-font-weight: 100;
+     --notes-font-weight: 50; */
+
+  /* Font sizes */  
+  
+  --font-size-12: 0.75rem;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-20: 1.25rem;
+  --font-size-24: 1.5rem;
 
   /* Letter spacing */
 
@@ -91,33 +100,67 @@ body {
 
 main {
   margin: auto;
+  padding: 1.5rem;;
   background-color: var(--secondary-bg-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 1.5rem;
   max-width: 21rem;
-  border-radius: 1rem;
+  border: 0.0625rem solid #111111 ;
+  border-radius: 1.25rem;
+  filter: drop-shadow(0.625rem 0.625rem #111111);
   /* container-type: inline-size; */
 }
 
 .hero-photo {
-  margin: 1.5rem;
   border-radius: 0.7rem;
   overflow: hidden;
 }
 
-.container {
-  margin: 1.5rem;
+.text-container {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   text-align: start;
+  gap: 0.75rem;
+  > h3 {
+    font-weight: var(--secondary-font-weight);
+    font-size: var(--font-size-12);
+  }
+  > h1 {
+    font-weight: var(--primary-font-weight);
+    font-size: var(--font-size-20);
+  }
+  > p {
+    font-weight: var(--secondary-font-weight);
+    font-size: var(--font-size-14);
+    color: var(--secondary-font-color);
+  }
+}
+
+.category {
+  width: 4.5625rem;
+  height: 1.625rem;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-font-color);
+  font-weight: var(--primary-font-weight);
+  font-size: var(--font-size-12);
+  border-radius: 0.25rem;
+  text-align: center;
+  align-content: center;
 }
 
 .avatar {
+  max-height: 2rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  gap: 0.75rem;
+  font-weight: var(--primary-font-weight);
+  font-size: var(--font-size-14);
+  > img {
+    max-height: 2rem;
+    width: auto;
+  }
 }

@@ -109,7 +109,6 @@ main {
   border: 0.0625rem solid #111111 ;
   border-radius: 1.25rem;
   filter: drop-shadow(0.625rem 0.625rem #111111);
-  /* container-type: inline-size; */
 }
 
 .hero-photo {
@@ -162,5 +161,26 @@ main {
   > img {
     max-height: 2rem;
     width: auto;
+  }
+}
+
+@media screen and (width > 799px) {
+  main {
+    max-width: 24rem;
+  }
+
+  .text-container {
+    > h3 {
+    font-size: var(--font-size-14);
+    }
+  > h1 {
+    font-weight: var(--primary-font-weight);
+    font-size: var(--font-size-24);
+    }
+  > p {
+    font-weight: var(--secondary-font-weight);
+    font-size: var(--font-size-16);
+    color: var(--secondary-font-color);
+    }
   }
 }

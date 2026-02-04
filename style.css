@@ -138,6 +138,10 @@ main {
   }
 }
 
+h1:hover {
+      color: var(--primary-bg-color);
+    }
+
 .category {
   width: 4.5625rem;
   height: 1.625rem;
